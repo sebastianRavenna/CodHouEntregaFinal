@@ -1,0 +1,20 @@
+
+<h1 class="titulos">Listado de Productos</h1>
+
+<div class="listadoEncabezado">
+  <p>ID</p><p>Categoria</p><p>Nombre producto</p><p>Precio</p><p>Stock</p>
+</div>
+
+  {{#each productosObtenidos}}
+  <div class="productList">
+      <p> {{this.id}} </p> 
+      <p> {{this.category}} </p>
+      <p>{{this.title}}</p> 
+      <p> {{formatear this.price}} </p> 
+      <p>{{this.stock}} </p> 
+  </div>
+  {{/each}}
+
+<a href="./realtimeproducts" target="_blank" class="btn btn-secondary">Editar Stock</a>
+
+

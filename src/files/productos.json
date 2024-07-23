@@ -1,0 +1,29 @@
+[
+  {
+    "title": "Camiseta de Basquet",
+    "price": "150000",
+    "code": "Bas123",
+    "stock": "23",
+    "description": "Ginobilli Argentina",
+    "category": "Deportes",
+    "id": 2
+  },
+  {
+    "title": "Pelota",
+    "price": "120000",
+    "code": "Bball1",
+    "stock": "10",
+    "description": "Pelota de cuero de Basquetbol",
+    "category": "Pelotas",
+    "id": 3
+  },
+  {
+    "title": "Short Bbol Argentina",
+    "price": "78000",
+    "code": "Bas124",
+    "stock": "20",
+    "description": "Short Basquetbol Seleccion Arg",
+    "category": "Deportes",
+    "id": 4
+  }
+]

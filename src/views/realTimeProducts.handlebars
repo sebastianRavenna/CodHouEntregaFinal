@@ -1,0 +1,66 @@
+<nav>
+<a href="/" class="btn btn-primary btn-sm ">Inicio</a>
+
+</nav>
+      <h1 class="titulos">Agrega, elimina o edita articulos del Stock</h1>
+
+
+<div>
+  <h2 class="titulos">Productos existentes</h2>
+</div>
+<div id="productos"></div>
+<div>
+  <h2 class="titulos">Agregar productos</h2>
+     <form id="agregar" action="">
+          <label for="title" class="form-label">Titulo</label>
+          <input type="text" id="title" name="title" value="" class="form-control">
+          <label for="price" class="form-label">Precio</label>
+          <input type="number" id="price" name="price" value="" class="form-control">
+          <label for="category" class="form-label">Categoria</label>
+          <input type="text" name="category" value="" id="category" class="form-control">
+          <label for="code" class="form-label">Código</label>
+          <input type="text" id="code" name="code" value="" class="form-control">
+          <label for="description" class="form-label">Descripción</label>
+          <input type="text" id="description" value="" name="description" class="form-control">
+          <label for="stock" class="form-label">Stock</label>
+          <input type="number" value="" name="stock" class="form-control">
+          <label for="status" class="form-label">Status</label>
+          <input type="text" value="true" class="form-control">
+        <input type="submit" value="Enviar" class="btn btn-secondary btnStock">
+      </form>
+</div>
+<div class="errores" id="errorAgregar"></div>
+
+<div>
+  <h2 class="titulos">Borrar productos</h2>
+  <form id="borrar" action="">
+  <label for="IDproducto" class="form-label">ID de producto</label>
+  <input type="text" id="IDproducto" value="" class="form-control">
+  <input type="submit" value="Borrar" class="btn btn-secondary btnStock">
+</form></div>
+<div class="errores" id="errorBorrar"></div>
+
+<div>
+  <h2 class="titulos">Modificar productos</h2>
+  <form id="modificar" action="">
+      <label for="IDproductoModificar" class="form-label">ID de producto</label>
+        <input type="text" id="IDproductoModificar" name="IDproductoModificar" value="" class="form-control">
+      <label for="propiedad" class="form-label">Qué querés modificar?</label>
+        <select name="propiedad" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <option value="" disabled selected>Selecciona...</option>
+          <option value="title">Nombre</option>
+          <option value="price">Precio</option>
+          <option value="stock">Stock</option>
+          <option value="description">Descripción</option>
+          <option value="category">Categoría</option>
+          <option value="status">Status</option>
+      </select><br>
+      <label for="nuevoValor" class="form-label">Nuevo valor</label>
+      <input type="text" id="nuevoValor" name="nuevoValor" value="" class="form-control">
+      <input type="submit" value="Modificar" class="btn btn-secondary btnStock">
+  </form>
+</div>
+<div class="errores" id="errorModificar"></div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/realtimeproducts.js"></script>
