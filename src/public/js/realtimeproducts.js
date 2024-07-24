@@ -57,10 +57,8 @@ formulario.addEventListener("submit", (e) => {
 const borrador = document.querySelector("#borrar");
 borrador.addEventListener("submit", (e) => {
   e.preventDefault();
-
   const IDaborrar = borrador.IDproducto.value;
-
-  socket.emit("aBorrar", IDaborrar);
+  socket.emit("Borrar", IDaborrar);
   const mostrarError = document.querySelector("#errorBorrar");
   mostrarError.innerText = "";
   socket.on("errormsj", (data) => {
@@ -79,7 +77,7 @@ modificador.addEventListener("submit", (e) => {
   const propiedad = datosModificables.propiedad;
   const valor = datosModificables.nuevoValor;
 
-  socket.emit("aModificar", { IDamodificar, propiedad, valor });
+  socket.emit("Editar", { IDamodificar, propiedad, valor });
   const mostrarError = document.querySelector("#errorModificar");
   mostrarError.innerText = "";
   socket.on("errorModificar", (data) => {

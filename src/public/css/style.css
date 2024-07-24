@@ -82,3 +82,66 @@ form {
     border-bottom:5px solid red;
     display:inline-block;
 }
+
+
+/*chat*/
+
+.bold-name {
+    display: flex;
+    align-items: center;
+    font-size: large;
+    font-weight: bold;
+    color: rgb(0, 30, 255);
+  }
+  
+  
+.container{
+    align-content: center;
+    display: flex;
+    width: 600px;
+    height: 600px;
+    border: solid 3px black;
+}
+
+.containerLeft{
+    flex: 1;
+    background-color: lightblue;
+}
+
+.containerRight{
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+}
+
+#contenedor-chat{
+    flex: 7;  
+    background-color:lightgray;
+    margin: 20;
+    padding: 20;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    border: solid 1px blue;
+}
+
+.message {
+flex:1; 
+background: lightgreen;
+display: flex;
+}
+
+#send{
+    flex: 4;
+}
+
+.message>label {
+    flex: 1;
+    font-weight: bold;
+    color: rgb(0, 30, 255);
+    margin: auto;
+    padding-left: 2%;
+}
+
+#conectados-titulo{
+    color: rgb(0, 30, 255);
+}
